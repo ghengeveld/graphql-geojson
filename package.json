@@ -1,0 +1,18 @@
+{
+  "name": "graphql-geojson",
+  "version": "1.0.0",
+  "description": "GraphQL schema object types for GeoJSON",
+  "keywords": ["graphql", "geojson", "schema"],
+  "main": "index.js",
+  "scripts": {},
+  "license": "ISC",
+  "author": "Gert Hengeveld <info@ghengeveld.nl> (https://github.com/ghengeveld)",
+  "homepage": "https://github.com/ghengeveld/graphql-geojson#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghengeveld/graphql-geojson.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ghengeveld/graphql-geojson/issues"
+  }
+}
