@@ -1,5 +1,11 @@
 # graphql-geojson
-GraphQL schema object types for GeoJSON
+
+[![npm version][npm shield]][npm url]
+
+GraphQL schema object types for GeoJSON.
+
+[npm shield]: https://img.shields.io/npm/v/graphql-geojson.svg
+[npm url]: https://www.npmjs.com/package/graphql-geojson
 
 ## Installation
 
