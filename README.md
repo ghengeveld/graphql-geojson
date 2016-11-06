@@ -2,10 +2,11 @@
 
 [![npm version][npm shield]][npm url]
 
-GraphQL schema object types for GeoJSON.
+GraphQL schema object types for GeoJSON. Based on [GeoJSON Object Schema][geojson schema].
 
 [npm shield]: https://img.shields.io/npm/v/graphql-geojson.svg
 [npm url]: https://www.npmjs.com/package/graphql-geojson
+[geojson schema]: https://github.com/sogko/graphql-schemas/tree/master/geojson
 
 ## Installation
 
