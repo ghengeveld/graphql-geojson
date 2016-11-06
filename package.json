@@ -1,8 +1,12 @@
 {
   "name": "graphql-geojson",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "GraphQL schema object types for GeoJSON",
-  "keywords": ["graphql", "geojson", "schema"],
+  "keywords": [
+    "graphql",
+    "geojson",
+    "schema"
+  ],
   "main": "index.js",
   "scripts": {},
   "license": "ISC",
