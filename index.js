@@ -152,6 +152,17 @@ const GeoJSON = {
       features: { type: new NonNull(new List(new NonNull(GeoJSON.FeatureObject))) },
     }),
   }),
+  // This is dedicated to the use-case where you want to type a geometry that will be GeoJSON compliant but never sure if it will be of the Enum Types listed above.
+  GeoJSONGeometryObject: new ObjectType({
+    name: 'GeoJSONGeometryObject',
+    interfaces: () => [GeoJSON.GeoJSONInterface, GeoJSON.GeometryInterface],
+    fields: () => ({
+      type: { type: new NonNull(GeoJSON.TypeEnum) },
+      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      bbox: { type: new List(Float) },
+      coordinates: { type: GeoJSON.CoordinatesScalar },
+    })
+  }),
 
   CRSTypeEnum: new EnumType({
     name: 'GeoJSONCRSType',
