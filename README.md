@@ -35,6 +35,12 @@ export default new GraphQLSchema({
         resolve: () => ({
           type: 'Point',
           coordinates: [-105.01621, 39.57422],
+          crs: {
+            type: 'name',
+            properties: {
+              name: 'urn:ogc:def:crs:OGC:1.3:CRS84',
+            },
+          },
         }),
       },
     }),
@@ -49,6 +55,14 @@ query {
   point {
     type
     coordinates
+    crs {
+      type
+      properties {
+        ... on GeoJSONNamedCRSProperties {
+          name
+        }
+      }
+    }
   }
 }
 ```
