@@ -49,7 +49,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface, GeoJSON.GeometryInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       coordinates: { type: GeoJSON.CoordinatesScalar },
     }),
@@ -61,7 +61,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface, GeoJSON.GeometryInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       coordinates: { type: GeoJSON.CoordinatesScalar },
     }),
@@ -73,7 +73,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface, GeoJSON.GeometryInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       coordinates: { type: GeoJSON.CoordinatesScalar },
     }),
@@ -85,7 +85,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface, GeoJSON.GeometryInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       coordinates: { type: GeoJSON.CoordinatesScalar },
     }),
@@ -97,7 +97,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface, GeoJSON.GeometryInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       coordinates: { type: GeoJSON.CoordinatesScalar },
     }),
@@ -109,7 +109,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface, GeoJSON.GeometryInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       coordinates: { type: GeoJSON.CoordinatesScalar },
     }),
@@ -121,7 +121,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       geometries: { type: new NonNull(new List(new NonNull(GeoJSON.GeometryInterface))) },
     }),
@@ -133,7 +133,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       geometry: { type: GeoJSON.GeometryInterface },
       properties: { type: GeoJSON.JsonScalar },
@@ -147,7 +147,7 @@ const GeoJSON = {
     interfaces: () => [GeoJSON.GeoJSONInterface],
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       features: { type: new NonNull(new List(new NonNull(GeoJSON.FeatureObject))) },
     }),
@@ -202,7 +202,7 @@ const GeoJSON = {
     name: 'GeoJSONInterface',
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
     }),
     resolveType: value => GeoJSON[`${value.type}Object`],
@@ -212,7 +212,7 @@ const GeoJSON = {
     name: 'GeoJSONGeometryInterface',
     fields: () => ({
       type: { type: new NonNull(GeoJSON.TypeEnum) },
-      crs: { type: new NonNull(GeoJSON.CoordinateReferenceSystemObject) },
+      crs: { type: GeoJSON.CoordinateReferenceSystemObject },
       bbox: { type: new List(Float) },
       coordinates: { type: GeoJSON.CoordinatesScalar },
     }),
